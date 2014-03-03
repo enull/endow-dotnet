@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using System.Data.Entity;
 using Endow.DataAccess.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Endow.DataAccess
 {
@@ -18,7 +11,7 @@ namespace Endow.DataAccess
 		{
 			//Database.SetInitializer<EndowContext>(new CreateDatabaseIfNotExists<EndowContext>());
 			//Database.SetInitializer<EndowContext>(new DropCreateDatabaseIfModelChanges<EndowContext>());
-			Database.SetInitializer<EndowContext>(new DropCreateDatabaseAlways<EndowContext>());
+			Database.SetInitializer<EndowContext>(new EndowDbInitializer());
 		}
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -62,6 +55,7 @@ namespace Endow.DataAccess
 				.HasKey(r => new { r.RoleId, r.UserId });
 
 		}
+
 
 		public DbSet<User> Users { get; set; }
 		public DbSet<Alarm> Alarms { get; set; }

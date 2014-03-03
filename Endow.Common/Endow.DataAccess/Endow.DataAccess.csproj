@@ -7,8 +7,8 @@
     <ProjectGuid>{3D3F8A25-72A3-4D6C-B055-E9F199E6792C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Endow.Data</RootNamespace>
-    <AssemblyName>Endow.Data</AssemblyName>
+    <RootNamespace>Endow.DataAccess</RootNamespace>
+    <AssemblyName>Endow.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
